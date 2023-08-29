@@ -1,0 +1,25 @@
+{
+	"folders": [
+		{
+			"path": "../flutter/check_app"
+		},
+		{
+			"path": "../Python-PTIT"
+		},
+		{
+			"path": "../flutter/flutter_application_1"
+		},
+		{
+			"path": "../dark"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"[python]": {
+			"editor.defaultFormatter": "ms-python.black-formatter"
+		},
+		"python.formatting.provider": "none"
+	}
+}
