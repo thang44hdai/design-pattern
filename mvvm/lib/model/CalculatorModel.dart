@@ -1,0 +1,3 @@
+class CalculatorModel {
+  double? result ; 
+}
