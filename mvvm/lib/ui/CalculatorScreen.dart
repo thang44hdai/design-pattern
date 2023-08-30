@@ -3,8 +3,8 @@ import 'package:mvvm/viewmodel/CalculatorViewModel.dart';
 import 'package:provider/provider.dart';
 
 class CalculatorScreen extends StatelessWidget {
-  final TextEditingController num1 = TextEditingController();
-  final TextEditingController num2 = TextEditingController();
+  final TextEditingController btn_num1 = TextEditingController();
+  final TextEditingController btn_num2 = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -17,14 +17,14 @@ class CalculatorScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               TextField(
-                controller: num1,
+                controller: btn_num1,
                 keyboardType: TextInputType.number,
                 decoration: InputDecoration(
                   hintText: "Mời bạn nhập vào giá trị a: ",
                 ),
               ),
               TextField(
-                controller: num2,
+                controller: btn_num2,
                 keyboardType: TextInputType.number,
                 decoration: InputDecoration(
                   hintText: "Mời bạn nhập vào giá trị b: ",
@@ -43,21 +43,19 @@ class CalculatorScreen extends StatelessWidget {
                 children: [
                   ElevatedButton(
                     onPressed: () {
-                      final double numA =
-                          double.tryParse(num1.text) ?? 0.0;
-                      final double numB =
-                          double.tryParse(num2.text) ?? 0.0;
-                      Provider.of<CalculatorViewModel>(context, listen: false).add(numA, numB);
+                      final double numA = double.tryParse(btn_num1.text) ?? 0.0;
+                      final double numB = double.tryParse(btn_num2.text) ?? 0.0;
+                      Provider.of<CalculatorViewModel>(context, listen: false)
+                          .add(numA, numB);
                     },
                     child: Text('Add'),
                   ),
                   ElevatedButton(
                     onPressed: () {
-                      final double numA =
-                          double.tryParse(num1.text) ?? 0.0;
-                      final double numB =
-                          double.tryParse(num2.text) ?? 0.0;
-                      Provider.of<CalculatorViewModel>(context, listen: false).subtract(numA, numB);
+                      final double numA = double.tryParse(btn_num1.text) ?? 0.0;
+                      final double numB = double.tryParse(btn_num2.text) ?? 0.0;
+                      Provider.of<CalculatorViewModel>(context, listen: false)
+                          .subtract(numA, numB);
                     },
                     child: Text('Subtract'),
                   ),
