@@ -1,3 +1,3 @@
 class CalculatorModel {
-  double? result ; 
+  double result = 0; 
 }

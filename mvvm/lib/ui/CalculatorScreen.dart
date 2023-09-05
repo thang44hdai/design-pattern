@@ -2,10 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:mvvm/viewmodel/CalculatorViewModel.dart';
 import 'package:provider/provider.dart';
 
-class CalculatorScreen extends StatelessWidget {
+class CalculatorScreen extends StatefulWidget {
+  const CalculatorScreen({super.key});
+
+  @override
+  State<CalculatorScreen> createState() => _CalculatorScreenState();
+}
+
+class _CalculatorScreenState extends State<CalculatorScreen> {
+  // void initState() {
+  //   super.initState();
+  //   // you can uncomment this to get all batman movies when the page is loaded
+  //   Provider.of<CalculatorViewModel>(context, listen: false).add(1, 2);
+  // }
   final TextEditingController btn_num1 = TextEditingController();
   final TextEditingController btn_num2 = TextEditingController();
-
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(

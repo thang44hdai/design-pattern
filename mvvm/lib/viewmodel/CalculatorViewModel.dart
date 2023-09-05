@@ -4,13 +4,14 @@ import 'package:mvvm/model/CalculatorModel.dart';
 
 class CalculatorViewModel extends ChangeNotifier {
   final CalculatorModel model = CalculatorModel();
+  get result => model.result;
 
-  void add(double a, double b) async {
+  void add(double a, double b) {
     model.result = a + b;
     notifyListeners();
   }
 
-  void subtract(double a, double b) async {
+  void subtract(double a, double b) {
     model.result = a - b;
     notifyListeners();
   }
