@@ -2,78 +2,55 @@ import 'package:flutter/material.dart';
 import 'package:mvvm/viewmodel/CalculatorViewModel.dart';
 import 'package:provider/provider.dart';
 
-class CalculatorScreen extends StatefulWidget {
-  const CalculatorScreen({super.key});
-
-  @override
-  State<CalculatorScreen> createState() => _CalculatorScreenState();
-}
-
-class _CalculatorScreenState extends State<CalculatorScreen> {
-  // void initState() {
-  //   super.initState();
-  //   // you can uncomment this to get all batman movies when the page is loaded
-  //   Provider.of<CalculatorViewModel>(context, listen: false).add(1, 2);
-  // }
-  final TextEditingController btn_num1 = TextEditingController();
-  final TextEditingController btn_num2 = TextEditingController();
+class CalculatorScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (context) => CalculatorViewModel(),
-      child: Scaffold(
-        appBar: AppBar(title: Text('Calculator')),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              TextField(
-                controller: btn_num1,
-                keyboardType: TextInputType.number,
-                decoration: InputDecoration(
-                  hintText: "Mời bạn nhập vào giá trị a: ",
+    final calculatorViewModel = Provider.of<CalculatorViewModel>(context);
+
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Flutter Calculator'),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            TextField(
+              onChanged: (value) {
+                calculatorViewModel.updateA(double.parse(value));
+              },
+              keyboardType: TextInputType.number,
+              decoration: InputDecoration(labelText: 'Nhập số a'),
+            ),
+            TextField(
+              onChanged: (value) {
+                calculatorViewModel.updateB(double.parse(value));
+              },
+              keyboardType: TextInputType.number,
+              decoration: InputDecoration(labelText: 'Nhập số b'),
+            ),
+            SizedBox(height: 20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    calculatorViewModel.add();
+                  },
+                  child: Text('Add'),
                 ),
-              ),
-              TextField(
-                controller: btn_num2,
-                keyboardType: TextInputType.number,
-                decoration: InputDecoration(
-                  hintText: "Mời bạn nhập vào giá trị b: ",
+                SizedBox(width: 20),
+                ElevatedButton(
+                  onPressed: () {
+                    calculatorViewModel.subtract();
+                  },
+                  child: Text('Subtract'),
                 ),
-              ),
-              SizedBox(height: 16),
-              Consumer<CalculatorViewModel>(
-                builder: (context, calculator, child) => Text(
-                  'Result: ${calculator.model.result}',
-                  style: TextStyle(fontSize: 20),
-                ),
-              ),
-              SizedBox(height: 16),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  ElevatedButton(
-                    onPressed: () {
-                      final double numA = double.tryParse(btn_num1.text) ?? 0.0;
-                      final double numB = double.tryParse(btn_num2.text) ?? 0.0;
-                      Provider.of<CalculatorViewModel>(context, listen: false)
-                          .add(numA, numB);
-                    },
-                    child: Text('Add'),
-                  ),
-                  ElevatedButton(
-                    onPressed: () {
-                      final double numA = double.tryParse(btn_num1.text) ?? 0.0;
-                      final double numB = double.tryParse(btn_num2.text) ?? 0.0;
-                      Provider.of<CalculatorViewModel>(context, listen: false)
-                          .subtract(numA, numB);
-                    },
-                    child: Text('Subtract'),
-                  ),
-                ],
-              ),
-            ],
-          ),
+              ],
+            ),
+            SizedBox(height: 20),
+            Text('Kết quả: ${calculatorViewModel.model.result.toStringAsFixed(2)}'),
+          ],
         ),
       ),
     );
