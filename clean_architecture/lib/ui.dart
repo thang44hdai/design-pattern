@@ -18,19 +18,15 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Calculator'),
+        title: Text('Calculator App'),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'Result: $result',
+              'Kết quả: $result',
               style: TextStyle(fontSize: 24),
-            ),
-            Text(
-              'Operation: $operation',
-              style: TextStyle(fontSize: 18),
             ),
             SizedBox(height: 20),
             Row(
@@ -41,37 +37,40 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                     double a = double.parse(_controllerA.text);
                     double b = double.parse(_controllerB.text);
                     CalculatorResult calcResult = calculator.calculateSum(a, b);
+                    _controllerA.text = "";
+                    _controllerB.text = "";
                     setState(() {
                       result = calcResult.result;
-                      operation = calcResult.operation;
                     });
                   },
-                  child: Text('Tổng'),
+                  child: Text('Add'),
                 ),
                 SizedBox(width: 20),
                 ElevatedButton(
                   onPressed: () {
                     double a = double.parse(_controllerA.text);
                     double b = double.parse(_controllerB.text);
-                    CalculatorResult calcResult = calculator.calculateDifference(a, b);
+                    CalculatorResult calcResult =
+                        calculator.calculateDifference(a, b);
+                    _controllerA.text = "";
+                    _controllerB.text = "";
                     setState(() {
                       result = calcResult.result;
-                      operation = calcResult.operation;
                     });
                   },
-                  child: Text('Hiệu'),
+                  child: Text('Subtract'),
                 ),
               ],
             ),
             SizedBox(height: 20),
             TextField(
               controller: _controllerA,
-              decoration: InputDecoration(labelText: 'Số a'),
+              decoration: InputDecoration(labelText: 'Nhập số a:'),
               keyboardType: TextInputType.number,
             ),
             TextField(
               controller: _controllerB,
-              decoration: InputDecoration(labelText: 'Số b'),
+              decoration: InputDecoration(labelText: 'Nhập số b:'),
               keyboardType: TextInputType.number,
             ),
           ],

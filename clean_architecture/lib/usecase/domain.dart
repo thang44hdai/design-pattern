@@ -14,7 +14,6 @@ class CalculatorUseCase {
 
 class CalculatorResult {
   final double result;
-  final String operation;
-
-  CalculatorResult(this.result, this.operation);
+  
+  CalculatorResult(this.result);
 }
