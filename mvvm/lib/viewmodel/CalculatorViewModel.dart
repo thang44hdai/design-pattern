@@ -6,7 +6,7 @@ class CalculatorViewModel extends ChangeNotifier {
 
   void add(double a, double b) {
     model.result = a + b;
-    //notifyListeners();
+    notifyListeners();
   }
 
   void subtract(double a, double b) {
