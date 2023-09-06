@@ -1,14 +1,14 @@
 import 'package:clean_architecture/repository/repo.dart';
 
 class CalculatorUseCase {
-  final CalculatorRepository _repository = CalculatorRepository();
+  final CalculatorRepository repo = CalculatorRepository();
 
   CalculatorResult add(double a, double b) {
-    return _repository.add(a, b);
+    return repo.add(a, b);
   }
 
   CalculatorResult subtract(double a, double b) {
-    return _repository.subtract(a, b);
+    return repo.subtract(a, b);
   }
 }
 

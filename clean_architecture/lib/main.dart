@@ -1,4 +1,4 @@
-import 'package:clean_architecture/ui.dart';
+import 'package:clean_architecture/ui/calculator_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
