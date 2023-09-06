@@ -1,4 +1,5 @@
 import 'package:clean_architecture/repository/repo.dart';
+import 'package:clean_architecture/usecase/calculator_result.dart';
 
 class CalculatorUseCase {
   final CalculatorRepository repo = CalculatorRepository();
@@ -12,8 +13,3 @@ class CalculatorUseCase {
   }
 }
 
-class CalculatorResult {
-  final double result;
-  
-  CalculatorResult(this.result);
-}

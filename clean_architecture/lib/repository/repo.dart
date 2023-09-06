@@ -1,3 +1,4 @@
+import 'package:clean_architecture/usecase/calculator_result.dart';
 import 'package:clean_architecture/usecase/use_case.dart';
 
 class CalculatorRepository {
