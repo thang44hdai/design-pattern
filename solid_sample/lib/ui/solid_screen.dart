@@ -3,11 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:solid_sample/dataUser.dart';
 import '../user_service.dart';
 
-int idx=0;
 class MyApp extends StatefulWidget {
   @override
   _MyAppState createState() => _MyAppState();
 }
+
+int idx = 0;
 
 class _MyAppState extends State<MyApp> {
   final userService = dataUser();
@@ -24,7 +25,7 @@ class _MyAppState extends State<MyApp> {
         body: UserListWidget(UserService: userService),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
-            final user = User(id: Random().nextInt(50), name: "Test Name");
+            final user = User(idx++, "Test Name");
             userService.addUser(user);
             setState(() {});
           },
@@ -54,12 +55,12 @@ class _UserListWidgetState extends State<UserListWidget> {
       itemBuilder: (context, index) {
         final user = users[index];
         return ListTile(
-          title: Text(user.name+"   "+ user.id.toString()),
+          title: Text(user.name + "\n id: " + user.id.toString()),
           trailing: IconButton(
             icon: Icon(Icons.delete),
             onPressed: () {
               widget.UserService.deleteUser(user.id);
-              setState(() {}); 
+              setState(() {});
             },
           ),
         );
@@ -67,4 +68,3 @@ class _UserListWidgetState extends State<UserListWidget> {
     );
   }
 }
-

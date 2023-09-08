@@ -1,7 +1,10 @@
 class User {
-  int id = 0;
-  String name = "sdfsdf";
-  User({required id, required name});
+  int id=0;
+  String name = "";
+  User(int x, String y){
+    this.id=x;
+    this.name=y;
+  }
 }
 
 abstract class userService {

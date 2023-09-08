@@ -14,6 +14,6 @@ class dataUser implements userService {
 
   @override
   void deleteUser(int id) {
-    l.remove((element) => element.id == id);
+    l.remove(id);
   }
 }
