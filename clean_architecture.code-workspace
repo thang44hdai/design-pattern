@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "clean_architecture"
+		},
+		{
+			"path": "../Java_PTIT"
+		},
+		{
+			"path": "../dark"
+		}
+	],
+	"settings": {}
+}
