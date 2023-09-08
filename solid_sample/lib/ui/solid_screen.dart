@@ -1,8 +1,6 @@
 import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:solid_sample/dataUser.dart';
-
 import '../user_service.dart';
 
 int idx=0;
@@ -26,7 +24,7 @@ class _MyAppState extends State<MyApp> {
         body: UserListWidget(UserService: userService),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
-            final user = User(id: Random().nextInt(99999999), name: 'New User');
+            final user = User(id: Random().nextInt(50), name: "Test Name");
             userService.addUser(user);
             setState(() {});
           },
@@ -56,7 +54,7 @@ class _UserListWidgetState extends State<UserListWidget> {
       itemBuilder: (context, index) {
         final user = users[index];
         return ListTile(
-          title: Text(user.name),
+          title: Text(user.name+"   "+ user.id.toString()),
           trailing: IconButton(
             icon: Icon(Icons.delete),
             onPressed: () {

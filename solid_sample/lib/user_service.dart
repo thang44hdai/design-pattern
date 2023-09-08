@@ -1,6 +1,6 @@
 class User {
   int id = 0;
-  String name = "";
+  String name = "sdfsdf";
   User({required id, required name});
 }
 
