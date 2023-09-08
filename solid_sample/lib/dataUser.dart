@@ -14,7 +14,7 @@ class dataUser implements userService {
 
   @override
   void deleteUser(int id) {
-    if (id < l.length) 
-      l.remove(id);
+    // ignore: list_remove_unrelated_type
+    l.remove((element) => element.id == id);
   }
 }
