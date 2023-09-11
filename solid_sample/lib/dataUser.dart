@@ -1,6 +1,7 @@
+import 'package:flutter/material.dart';
 import 'package:solid_sample/user_service.dart';
 
-class dataUser implements userService {
+class dataUser extends userService {
   final List<User> l = [];
   @override
   List<User> listUser() {
@@ -15,5 +16,6 @@ class dataUser implements userService {
   @override
   void deleteUser(int id) {
     l.remove(id);
+    Notification;
   }
 }

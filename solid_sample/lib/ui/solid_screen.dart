@@ -49,7 +49,7 @@ class _UserListWidgetState extends State<UserListWidget> {
   @override
   Widget build(BuildContext context) {
     final users = widget.UserService.listUser();
-
+    final TextEditingController btnInput = TextEditingController();
     return ListView.builder(
       itemCount: users.length,
       itemBuilder: (context, index) {
@@ -60,11 +60,13 @@ class _UserListWidgetState extends State<UserListWidget> {
             icon: Icon(Icons.delete),
             onPressed: () {
               widget.UserService.deleteUser(user.id);
+              idx--;
               setState(() {});
             },
           ),
         );
       },
     );
+
   }
 }
