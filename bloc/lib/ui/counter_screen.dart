@@ -7,7 +7,7 @@ class CounterPage extends StatefulWidget {
 }
 
 class _CounterPageState extends State<CounterPage> {
-  final counter_bloc _counterBloc = counter_bloc();
+  final _counterBloc = counter_bloc();
 
   @override
   void dispose() {
