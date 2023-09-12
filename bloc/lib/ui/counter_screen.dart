@@ -12,7 +12,6 @@ class _CounterPageState extends State<CounterPage> {
   @override
   void dispose() {
     _counterBloc.dispose();
-    super.dispose();
   }
 
   @override
@@ -34,13 +33,16 @@ class _CounterPageState extends State<CounterPage> {
               builder: (context, snapshot) {
                 return Text(
                   '${snapshot.data ?? 0}',
-                  style: TextStyle(fontSize: 48),
                 );
               },
             ),
-            SizedBox(height: 20),
+            SizedBox(
+              height: 20,
+            ),
             ElevatedButton(
-              onPressed: () => _counterBloc.increment(),
+              onPressed: (){
+                _counterBloc.increment();
+              },
               child: Icon(Icons.add),
             ),
           ],
