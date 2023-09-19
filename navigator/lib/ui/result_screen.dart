@@ -10,6 +10,16 @@ class result_screen extends StatefulWidget {
 class _result_screenState extends State<result_screen> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Return to Order"),
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: Icon(Icons.keyboard_return),
+        ),
+      ),
+    );
   }
 }

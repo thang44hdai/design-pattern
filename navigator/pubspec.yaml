@@ -17,3 +17,11 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/banhmi.png
+    - assets/coca.png
+    - assets/donut.png
+    - assets/ham.png
+    - assets/matcha.jpeg
+    - assets/pepsi.png
+    - assets/pizza.png
