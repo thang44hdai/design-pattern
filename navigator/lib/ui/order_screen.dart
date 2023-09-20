@@ -3,30 +3,66 @@ import 'package:navigator/model/food.dart';
 import 'package:navigator/ui/result_screen.dart';
 
 void init(List<food> list_food) {
-  list_food.add(food("Cocacola", "assets/coca.png",
-      "Coca-Cola và Pepsi là hai hãng nước giải khát nổi tiếng trên khắp thế giới. Cả hai đều cung cấp các loại đồ uống ngon và phổ biến. Coca-Cola đã tồn tại từ năm 1886 và là một trong những thương hiệu nước giải khát có tiếng nhất."));
-  list_food.add(food("Pepsi", "assets/pepsi.png",
-      "Coca-Cola và Pepsi là hai hãng nước giải khát nổi tiếng trên khắp thế giới. Cả hai đều cung cấp các loại đồ uống ngon và phổ biến. Coca-Cola đã tồn tại từ năm 1886 và là một trong những thương hiệu nước giải khát có tiếng nhất."));
-  list_food.add(food("Trà sữa matcha", "assets/matcha.jpeg",
-      "Coca-Cola và Pepsi là hai hãng nước giải khát nổi tiếng trên khắp thế giới. Cả hai đều cung cấp các loại đồ uống ngon và phổ biến. Coca-Cola đã tồn tại từ năm 1886 và là một trong những thương hiệu nước giải khát có tiếng nhất."));
-  list_food.add(food("Bánh mì", "assets/banhmi.png",
-      "Coca-Cola và Pepsi là hai hãng nước giải khát nổi tiếng trên khắp thế giới. Cả hai đều cung cấp các loại đồ uống ngon và phổ biến. Coca-Cola đã tồn tại từ năm 1886 và là một trong những thương hiệu nước giải khát có tiếng nhất."));
-  list_food.add(food("Hamburger", "assets/ham.png",
-      "Coca-Cola và Pepsi là hai hãng nước giải khát nổi tiếng trên khắp thế giới. Cả hai đều cung cấp các loại đồ uống ngon và phổ biến. Coca-Cola đã tồn tại từ năm 1886 và là một trong những thương hiệu nước giải khát có tiếng nhất."));
-  list_food.add(food("Pizza", "assets/pizza.png",
-      "Coca-Cola và Pepsi là hai hãng nước giải khát nổi tiếng trên khắp thế giới. Cả hai đều cung cấp các loại đồ uống ngon và phổ biến. Coca-Cola đã tồn tại từ năm 1886 và là một trong những thương hiệu nước giải khát có tiếng nhất."));
-  list_food.add(food("Donut", "assets/donut.png",
-      "Coca-Cola và Pepsi là hai hãng nước giải khát nổi tiếng trên khắp thế giới. Cả hai đều cung cấp các loại đồ uống ngon và phổ biến. Coca-Cola đã tồn tại từ năm 1886 và là một trong những thương hiệu nước giải khát có tiếng nhất."));
-  list_food.add(food("Cocacola", "assets/coca.png",
-      "Coca-Cola và Pepsi là hai hãng nước giải khát nổi tiếng trên khắp thế giới. Cả hai đều cung cấp các loại đồ uống ngon và phổ biến. Coca-Cola đã tồn tại từ năm 1886 và là một trong những thương hiệu nước giải khát có tiếng nhất."));
-  list_food.add(food("Pepsi", "assets/pepsi.png",
-      "Coca-Cola và Pepsi là hai hãng nước giải khát nổi tiếng trên khắp thế giới. Cả hai đều cung cấp các loại đồ uống ngon và phổ biến. Coca-Cola đã tồn tại từ năm 1886 và là một trong những thương hiệu nước giải khát có tiếng nhất."));
-  list_food.add(food("Trà sữa matcha", "assets/matcha.jpeg",
-      "Coca-Cola và Pepsi là hai hãng nước giải khát nổi tiếng trên khắp thế giới. Cả hai đều cung cấp các loại đồ uống ngon và phổ biến. Coca-Cola đã tồn tại từ năm 1886 và là một trong những thương hiệu nước giải khát có tiếng nhất."));
-  list_food.add(food("Bánh mì", "assets/banhmi.png",
-      "Coca-Cola và Pepsi là hai hãng nước giải khát nổi tiếng trên khắp thế giới. Cả hai đều cung cấp các loại đồ uống ngon và phổ biến. Coca-Cola đã tồn tại từ năm 1886 và là một trong những thương hiệu nước giải khát có tiếng nhất."));
-  list_food.add(food("Hamburger", "assets/ham.png",
-      "Coca-Cola và Pepsi là hai hãng nước giải khát nổi tiếng trên khắp thế giới. Cả hai đều cung cấp các loại đồ uống ngon và phổ biến. Coca-Cola đã tồn tại từ năm 1886 và là một trong những thương hiệu nước giải khát có tiếng nhất."));
+  list_food.add(food(
+      "Cocacola",
+      "assets/coca.png",
+      "Coca-Cola và Pepsi là hai hãng nước giải khát nổi tiếng trên khắp thế giới. Cả hai đều cung cấp các loại đồ uống ngon và phổ biến. Coca-Cola đã tồn tại từ năm 1886 và là một trong những thương hiệu nước giải khát có tiếng nhất.",
+      false));
+  list_food.add(food(
+      "Pepsi",
+      "assets/pepsi.png",
+      "Coca-Cola và Pepsi là hai hãng nước giải khát nổi tiếng trên khắp thế giới. Cả hai đều cung cấp các loại đồ uống ngon và phổ biến. Coca-Cola đã tồn tại từ năm 1886 và là một trong những thương hiệu nước giải khát có tiếng nhất.",
+      false));
+  list_food.add(food(
+      "Trà sữa matcha",
+      "assets/matcha.jpeg",
+      "Coca-Cola và Pepsi là hai hãng nước giải khát nổi tiếng trên khắp thế giới. Cả hai đều cung cấp các loại đồ uống ngon và phổ biến. Coca-Cola đã tồn tại từ năm 1886 và là một trong những thương hiệu nước giải khát có tiếng nhất.",
+      false));
+  list_food.add(food(
+      "Bánh mì",
+      "assets/banhmi.png",
+      "Coca-Cola và Pepsi là hai hãng nước giải khát nổi tiếng trên khắp thế giới. Cả hai đều cung cấp các loại đồ uống ngon và phổ biến. Coca-Cola đã tồn tại từ năm 1886 và là một trong những thương hiệu nước giải khát có tiếng nhất.",
+      false));
+  list_food.add(food(
+      "Hamburger",
+      "assets/ham.png",
+      "Coca-Cola và Pepsi là hai hãng nước giải khát nổi tiếng trên khắp thế giới. Cả hai đều cung cấp các loại đồ uống ngon và phổ biến. Coca-Cola đã tồn tại từ năm 1886 và là một trong những thương hiệu nước giải khát có tiếng nhất.",
+      false));
+  list_food.add(food(
+      "Pizza",
+      "assets/pizza.png",
+      "Coca-Cola và Pepsi là hai hãng nước giải khát nổi tiếng trên khắp thế giới. Cả hai đều cung cấp các loại đồ uống ngon và phổ biến. Coca-Cola đã tồn tại từ năm 1886 và là một trong những thương hiệu nước giải khát có tiếng nhất.",
+      false));
+  list_food.add(food(
+      "Donut",
+      "assets/donut.png",
+      "Coca-Cola và Pepsi là hai hãng nước giải khát nổi tiếng trên khắp thế giới. Cả hai đều cung cấp các loại đồ uống ngon và phổ biến. Coca-Cola đã tồn tại từ năm 1886 và là một trong những thương hiệu nước giải khát có tiếng nhất.",
+      false));
+  list_food.add(food(
+      "Cocacola",
+      "assets/coca.png",
+      "Coca-Cola và Pepsi là hai hãng nước giải khát nổi tiếng trên khắp thế giới. Cả hai đều cung cấp các loại đồ uống ngon và phổ biến. Coca-Cola đã tồn tại từ năm 1886 và là một trong những thương hiệu nước giải khát có tiếng nhất.",
+      false));
+  list_food.add(food(
+      "Pepsi",
+      "assets/pepsi.png",
+      "Coca-Cola và Pepsi là hai hãng nước giải khát nổi tiếng trên khắp thế giới. Cả hai đều cung cấp các loại đồ uống ngon và phổ biến. Coca-Cola đã tồn tại từ năm 1886 và là một trong những thương hiệu nước giải khát có tiếng nhất.",
+      false));
+  list_food.add(food(
+      "Trà sữa matcha",
+      "assets/matcha.jpeg",
+      "Coca-Cola và Pepsi là hai hãng nước giải khát nổi tiếng trên khắp thế giới. Cả hai đều cung cấp các loại đồ uống ngon và phổ biến. Coca-Cola đã tồn tại từ năm 1886 và là một trong những thương hiệu nước giải khát có tiếng nhất.",
+      false));
+  list_food.add(food(
+      "Bánh mì",
+      "assets/banhmi.png",
+      "Coca-Cola và Pepsi là hai hãng nước giải khát nổi tiếng trên khắp thế giới. Cả hai đều cung cấp các loại đồ uống ngon và phổ biến. Coca-Cola đã tồn tại từ năm 1886 và là một trong những thương hiệu nước giải khát có tiếng nhất.",
+      false));
+  list_food.add(food(
+      "Hamburger",
+      "assets/ham.png",
+      "Coca-Cola và Pepsi là hai hãng nước giải khát nổi tiếng trên khắp thế giới. Cả hai đều cung cấp các loại đồ uống ngon và phổ biến. Coca-Cola đã tồn tại từ năm 1886 và là một trong những thương hiệu nước giải khát có tiếng nhất.",
+      false));
 }
 
 class order_screen extends StatefulWidget {
@@ -37,12 +73,10 @@ class order_screen extends StatefulWidget {
 }
 
 class _order_screenState extends State<order_screen> {
+  List<food> list_food = [];
   @override
   Widget build(BuildContext context) {
-    List<food> list_food = [];
     List<food> picked = [];
-    init(list_food);
-    bool isChecked = false;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.red.shade400,
@@ -86,18 +120,19 @@ class _order_screenState extends State<order_screen> {
                   ],
                 ),
                 trailing: Checkbox(
-                  value: isChecked,
+                  value: list_food[index].check,
                   onChanged: (bool? value) {
                     setState(() {
-                      isChecked = value!;
+                      list_food[index].check = value!;
+                      if (value == true) {
+                        picked.add(list_food[index]);
+                      } else {
+                        if (picked.contains(list_food[index])) {
+                          picked.removeWhere(
+                              (element) => element == list_food[index]);
+                        }
+                      }
                     });
-                    // if (value == true) {
-                    //   picked.add(list_food[index]);
-                    // } else {
-                    //   if (picked.contains(list_food[index]))
-                    //     picked.removeWhere(
-                    //         (element) => element == list_food[index]);
-                    // }
                   },
                 ),
               ),
@@ -107,12 +142,20 @@ class _order_screenState extends State<order_screen> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Navigator.push(context,
-              MaterialPageRoute(builder: (context) => result_screen()));
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => result_screen(list_food)));
         },
         backgroundColor: Colors.red.shade400,
         child: Icon(Icons.skip_next_rounded),
       ),
     );
+  }
+
+  @override
+  void initState() {
+    init(list_food);
+    super.initState();
   }
 }
