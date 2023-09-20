@@ -12,7 +12,7 @@ class result_screen extends StatefulWidget {
 class _result_screenState extends State<result_screen> {
   @override
   Widget build(BuildContext context) {
-    List<food> Food = [];// Lưu các món đã chọn ở màn hình trước
+    List<food> Food = []; // Lưu các món đã chọn ở màn hình trước
     for (food i in widget.result) {
       if (i.check == true) Food.add(i);
     }
