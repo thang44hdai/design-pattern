@@ -12,6 +12,7 @@ class _result_screenState extends State<result_screen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.red.shade400,
         title: Text("Return to Order"),
         leading: IconButton(
           onPressed: () {
