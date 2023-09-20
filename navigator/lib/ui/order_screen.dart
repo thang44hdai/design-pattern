@@ -73,7 +73,7 @@ class order_screen extends StatefulWidget {
 }
 
 class _order_screenState extends State<order_screen> {
-  List<food> list_food = [];
+  List<food> list_food = [];// List các món ăn được tạo sẵn
   @override
   Widget build(BuildContext context) {
     List<food> picked = [];
