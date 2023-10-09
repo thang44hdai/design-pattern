@@ -27,6 +27,26 @@ class _HomeScreenState extends State<HomeScreen> {
         "Fruits",
         "Fruits are the means by which flowering plants (also known as angiosperms) disseminate their seeds.",
         "Fruits are the means by which flowering plants (also known as angiosperms) disseminate their seeds. Edible fruits in particular have long propagated using the movements of humans and animals in a symbiotic relationship that is the means for seed dispersal for the one group and nutrition for the other; in fact, humans and many animals have become dependent on fruits as a source of food.[1] Consequently, fruits account for a substantial fraction of the world's agricultural output, and some (such as the apple and the pomegranate) have acquired extensive cultural and symbolic meanings."));
+    menu.add(food(
+        "fruits.jpg",
+        "Fruits",
+        "Fruits are the means by which flowering plants (also known as angiosperms) disseminate their seeds.",
+        "Fruits are the means by which flowering plants (also known as angiosperms) disseminate their seeds. Edible fruits in particular have long propagated using the movements of humans and animals in a symbiotic relationship that is the means for seed dispersal for the one group and nutrition for the other; in fact, humans and many animals have become dependent on fruits as a source of food.[1] Consequently, fruits account for a substantial fraction of the world's agricultural output, and some (such as the apple and the pomegranate) have acquired extensive cultural and symbolic meanings."));
+    menu.add(food(
+        "fruits.jpg",
+        "Fruits",
+        "Fruits are the means by which flowering plants (also known as angiosperms) disseminate their seeds.",
+        "Fruits are the means by which flowering plants (also known as angiosperms) disseminate their seeds. Edible fruits in particular have long propagated using the movements of humans and animals in a symbiotic relationship that is the means for seed dispersal for the one group and nutrition for the other; in fact, humans and many animals have become dependent on fruits as a source of food.[1] Consequently, fruits account for a substantial fraction of the world's agricultural output, and some (such as the apple and the pomegranate) have acquired extensive cultural and symbolic meanings."));
+    menu.add(food(
+        "fruits.jpg",
+        "Fruits",
+        "Fruits are the means by which flowering plants (also known as angiosperms) disseminate their seeds.",
+        "Fruits are the means by which flowering plants (also known as angiosperms) disseminate their seeds. Edible fruits in particular have long propagated using the movements of humans and animals in a symbiotic relationship that is the means for seed dispersal for the one group and nutrition for the other; in fact, humans and many animals have become dependent on fruits as a source of food.[1] Consequently, fruits account for a substantial fraction of the world's agricultural output, and some (such as the apple and the pomegranate) have acquired extensive cultural and symbolic meanings."));
+    menu.add(food(
+        "fruits.jpg",
+        "Fruits",
+        "Fruits are the means by which flowering plants (also known as angiosperms) disseminate their seeds.",
+        "Fruits are the means by which flowering plants (also known as angiosperms) disseminate their seeds. Edible fruits in particular have long propagated using the movements of humans and animals in a symbiotic relationship that is the means for seed dispersal for the one group and nutrition for the other; in fact, humans and many animals have become dependent on fruits as a source of food.[1] Consequently, fruits account for a substantial fraction of the world's agricultural output, and some (such as the apple and the pomegranate) have acquired extensive cultural and symbolic meanings."));
     super.initState();
   }
 
@@ -59,16 +79,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   vertical: 20,
                 ),
               ),
-              Expanded(
-                child: ListView.builder(
-                  itemCount: menu.length,
-                  itemBuilder: (context, index) {
-                    food Food = menu[index];
-                    return item(
-                        Food.asset, Food.title, Food.desc, Food.fullDesc);
-                  },
-                ),
-              ),
+              item(
+                  "fruits.jpg",
+                  "Fruits",
+                  "Fruits are the means by which flowering plants (also known as angiosperms) disseminate their seeds.",
+                  "Fruits are the means by which flowering plants (also known as angiosperms) disseminate their seeds. Edible fruits in particular have long propagated using the movements of humans and animals in a symbiotic relationship that is the means for seed dispersal for the one group and nutrition for the other; in fact, humans and many animals have become dependent on fruits as a source of food.[1] Consequently, fruits account for a substantial fraction of the world's agricultural output, and some (such as the apple and the pomegranate) have acquired extensive cultural and symbolic meanings."),
             ],
           ),
         ),
